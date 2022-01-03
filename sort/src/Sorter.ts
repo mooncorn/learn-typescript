@@ -5,10 +5,8 @@ export interface Sortable {
 }
 
 export abstract class Sorter implements Sortable {
-  abstract get length(): number;
-
+  abstract length: number;
   abstract compare(leftIndex: number, rightIndex: number): boolean;
-
   abstract swap(leftIndex: number, rightIndex: number): void;
 
   sort(): void {
