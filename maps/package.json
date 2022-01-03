@@ -10,11 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/faker": "^5.5.9",
-    "@types/google.maps": "^3.47.2",
     "parcel": "^2.0.1"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.12.12",
+    "@types/google.maps": "^3.47.2",
     "faker": "^5.5.3",
     "google-maps": "^4.3.3"
   }
