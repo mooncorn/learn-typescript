@@ -1,8 +1,8 @@
-import { Model } from './Model';
-import { Attributes } from './Attributes';
-import { ApiSync } from './ApiSync';
-import { Eventing } from './Eventing';
-import { Collection } from './Collection';
+import { Model } from "./Model";
+import { Attributes } from "./Attributes";
+import { ApiSync } from "./ApiSync";
+import { Eventing } from "./Eventing";
+import { Collection } from "./Collection";
 
 export interface UserProps {
   id?: number;
@@ -12,7 +12,7 @@ export interface UserProps {
 
 export type Callback = () => void;
 
-const rootUrl = 'http://localhost:3000/users';
+const rootUrl = "http://localhost:3000/users";
 
 export class User extends Model<UserProps> {
   static buildUser(attrs: UserProps): User {
@@ -28,4 +28,9 @@ export class User extends Model<UserProps> {
       User.buildUser(json)
     );
   }
+
+  setRandomAge = (): void => {
+    const age = Math.floor(Math.random() * 100);
+    this.set({ age });
+  };
 }
